@@ -1,0 +1,24 @@
+<div class="hero bg-{{heroClass.defaultValue}} hero-{{heroSize.defaultValue}}">
+    <div class="container-fluid">
+        <h1>{{ heroTitle.defaultValue }}</h1>
+        <h3>{{ heroSubtitle.defaultValue }}</h3>
+    </div>
+</div>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <app-labeled-text-field [config]="heroTitle"></app-labeled-text-field>
+        </div>
+        <div class="col">
+            <app-labeled-text-field [config]="heroSubtitle"></app-labeled-text-field>
+        </div>
+        <div class="col">
+            <app-labeled-select-field [config]="heroClass">
+            </app-labeled-select-field>
+        </div>
+        <div class="col">
+            <app-labeled-select-field [config]="heroSize"></app-labeled-select-field>
+        </div>
+    </div>
+</div>

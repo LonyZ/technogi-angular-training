@@ -1,0 +1,16 @@
+.hero {
+    display: flex;
+    align-items: center;
+}
+
+.hero-small {
+    height: 150px;
+}
+
+.hero-medium {
+    height: 250px;
+}
+
+.hero-large {
+    height: 400px;
+}

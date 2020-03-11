@@ -1,0 +1,6 @@
+<div class="form-group">
+    <label for="{{ config.label }}"><strong>{{config.label}}</strong></label>
+    <select class="form-control" [value]=config.defaultValue [(ngModel)]="config.defaultValue" [ngModelOptions]="{standalone: true}" id="{{ config.label }}">
+        <option *ngFor="let opt of config.options" [value]="opt">{{opt}}</option>
+    </select>
+</div>
