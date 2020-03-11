@@ -1,2 +1,2 @@
 # technogi-angular-training
-Cris, stop peaking in my code
+Cris, stop looking atmy code
