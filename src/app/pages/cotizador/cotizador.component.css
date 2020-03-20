@@ -1,0 +1,12 @@
+.list-image {
+    height: 280px;
+}
+.waste-bin {
+    color: red;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+}

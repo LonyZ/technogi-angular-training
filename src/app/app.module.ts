@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LabeledTextFieldComponent } from './common/input-templates/labeled-text-field/labeled-text-field.component';
 import { LabeledSelectFieldComponent } from './common/input-templates/labeled-select-field/labeled-select-field.component';
+import { CotizadorComponent } from './pages/cotizador/cotizador.component';
 
 @NgModule({
   declarations: [
@@ -14,10 +16,12 @@ import { LabeledSelectFieldComponent } from './common/input-templates/labeled-se
     NavbarComponent,
     HomeComponent,
     LabeledTextFieldComponent,
-    LabeledSelectFieldComponent
+    LabeledSelectFieldComponent,
+    CotizadorComponent
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     FormsModule
   ],
   providers: [],

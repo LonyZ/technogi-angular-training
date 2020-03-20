@@ -1,0 +1,55 @@
+<h1>Cotizador</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <!-- Lista de productos -->
+            <div class="form-group">
+                <label for="ItemList"><strong>Select an Item</strong></label>
+                <select class="form-control" [(ngModel)]="selectedItem" id="ItemList">
+                    <option *ngFor="let item of itemList" [ngValue]="item">{{item.breed}}</option>
+                </select>
+                <label for="quantity"><strong> Dogs selected</strong></label>
+                <input class="form-control" type="number" min="0" [(ngModel)]="quantity">
+                <br>
+                <button type="button" class="btn btn-primary" [disabled]="quantity <= 0" (click)="onAddToList()">
+                    Add to list
+                </button>
+            </div>
+        </div>
+        <div class="col text-center">
+            <!-- Producto seleccionado -->
+            <img class="list-image" src="{{ selectedItem.img }}" alt="test">
+            <div>Price: ${{ selectedItem.price }}</div>
+        </div>
+    </div>
+    <table class="table table-bordered" *ngIf="shoppingCartList.length > 0">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-center" scope="col">Name</th>
+                <th class="text-center" scope="col">Price per unit</th>
+                <th class="text-center" scope="col">Quantity</th>
+                <th class="text-center" scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cartItem of shoppingCartList, let item: index">
+                <th class="text-center" scope="row">
+                    {{cartItem.breed}}
+                </th>
+                <td class="text-center">$ {{cartItem.price}}</td>
+                <td class="text-center">{{cartItem.quantity}}</td>
+                <td class="text-center">
+                    $ {{cartItem.price * cartItem.quantity}}
+                    <span class="waste-bin text-right" (click)="onRemoveFromList(item)">Remove <fa-icon [icon]="faTrash"></fa-icon></span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td class="text-center">Total:</td>
+                <td class="text-center">$ {{getTotal()}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
