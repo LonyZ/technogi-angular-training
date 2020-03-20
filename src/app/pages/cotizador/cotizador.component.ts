@@ -30,7 +30,7 @@ export class CotizadorComponent implements OnInit {
       return item.breed === this.selectedItem.breed;
     });
     if (cartItem) {
-      cartItem.quantity += 1;
+      cartItem.quantity += this.quantity;
     } else {
       const item = { breed: this.selectedItem.breed, price: this.selectedItem.price, quantity: this.quantity };
       this.shoppingCartList.push(item);
