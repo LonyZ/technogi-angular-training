@@ -37,7 +37,7 @@ export class CotizadorComponent implements OnInit {
     }
     this.shoppingCartList.sort((a, b) => {
       return a.breed.localeCompare(b.breed);
-  });
+    });
   }
   onRemoveFromList(item): void {
     const itemIndex = this.shoppingCartList.findIndex(cItem => {
