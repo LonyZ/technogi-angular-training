@@ -15,10 +15,9 @@ export class CotizadorComponent implements OnInit {
   ];
 
   faTrash = faTrash;
-  Object = Object;
-  quantity = 0;
+  quantity: number = 0;
   selectedItem: any;
-  shoppingCartList = [];
+  shoppingCartList: Array<any> = [];
   constructor() { }
 
   ngOnInit(): void {
