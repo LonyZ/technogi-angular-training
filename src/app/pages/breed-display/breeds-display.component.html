@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h1>Breed Display</h1>
+    <h2>Breed: {{currentBreed}}</h2>
+    <div *ngIf="currentSubBreed.length > 0">
+        <h2>Sub-Breeds:
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#subreedList">Show/Hide
+                List</button>
+        </h2>
+
+        <div id="subreedList" class="row collapse">
+            <div class="col" *ngFor="let subBreed of currentSubBreed"> {{subBreed}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <app-toggle-button [btnTexts]="intervalBtn" [(status)]="btnStatus"
+                (buttonCallback)="toggleInterval($event)">
+            </app-toggle-button>
+        </div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-4">
+        <div class="col" *ngFor="let item of dogsList; let i = index;">
+            <div class="picture-display">
+                <app-dog [config]="item" [photoIndex]="i" (openDetails)="openImageDetails($event)"></app-dog>
+            </div>
+        </div>
+
+    </div>
+</div>

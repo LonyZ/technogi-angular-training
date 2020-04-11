@@ -1,0 +1,9 @@
+.picture-display {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 100%;
+  background: antiquewhite;
+  overflow: hidden;
+  margin: 10px 0;
+}

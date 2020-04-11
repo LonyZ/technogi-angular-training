@@ -38,6 +38,7 @@ export class CotizadorComponent implements OnInit {
       return a.breed.localeCompare(b.breed);
     });
   }
+
   onRemoveFromList(item): void {
     const itemIndex = this.shoppingCartList.findIndex(cItem => {
       return cItem.breed === item.breed;
